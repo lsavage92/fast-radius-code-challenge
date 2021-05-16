@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import "./styles/main.scss";
 import PartsList from "./components/PartsList";
+import { fetchParts } from "./services";
 
 function App() {
   /**
@@ -11,14 +12,8 @@ function App() {
   const [parts, setParts] = useState([]);
 
   useEffect(() => {
-    getParts();
+    fetchParts().then((res) => setParts(res.data));
   }, []);
-
-  async function getParts() {
-    const res = await fetch("http://localhost:5555/parts");
-    const json = await res.json();
-    setParts(json.data);
-  }
 
   return (
     <div className="App">
