@@ -18,7 +18,7 @@ export const updateQuantity = async (quantity, id) => {
   try {
     const res = await fetch(`http://localhost:5555/parts/${id}`, {
       method: "PUT",
-      body: { quantity },
+      body: JSON.stringify({ quantity }),
     });
     const json = await res.json();
     return json;

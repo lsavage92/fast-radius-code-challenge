@@ -5,10 +5,6 @@ import { updateQuantity } from "../services";
 const PartCard = ({ part }) => {
   let [quantity, setQuantity] = useState(0);
 
-  async function savePart() {
-    const data = await updateQuantity(quantity, part.id);
-    console.log(data);
-  }
   return (
     <div>
       <span>{part.part_file.file_name}</span>
@@ -19,7 +15,7 @@ const PartCard = ({ part }) => {
           value={quantity}
           onChange={(e) => setQuantity(e.target.value)}
         />
-        <button onClick={(e) => savePart()}>Save</button>
+        <button onClick={(e) => updateQuantity(quantity, part.id)}>Save</button>
       </div>
     </div>
   );
