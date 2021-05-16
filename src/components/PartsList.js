@@ -5,7 +5,7 @@ const PartsList = ({ parts }) => {
     // TODO (lsavage): replace w/ parts from API
     <div id="parts-list">
       {[1].map((part) => (
-        <PartCard part={part} />
+        <PartCard part={part} key={part.id} />
       ))}
     </div>
   );

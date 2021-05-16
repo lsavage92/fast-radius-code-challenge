@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const PartCard = ({ part }) => {
-  let [quantity, setQuantity] = useState(null);
+  let [quantity, setQuantity] = useState(0);
   return (
     <div>
       <span>PART_NAME_HERE</span>
