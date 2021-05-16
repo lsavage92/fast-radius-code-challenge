@@ -1,10 +1,10 @@
 import "./styles/main.scss";
-import PartCard from "./components/PartCard";
+import PartsList from "./components/PartsList";
 
 function App() {
   return (
     <div className="App">
-      <PartCard />
+      <PartsList />
     </div>
   );
 }

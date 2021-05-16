@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const PartCard = () => {
+const PartCard = ({ part }) => {
   let [quantity, setQuantity] = useState(null);
   return (
     <div>
