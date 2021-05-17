@@ -3,7 +3,7 @@ import { useState } from "react";
 import { updateQuantity } from "../services";
 
 const PartCard = ({ part }) => {
-  let [quantity, setQuantity] = useState(0);
+  let [quantity, setQuantity] = useState(part.quantity);
 
   return (
     <div>
