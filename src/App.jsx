@@ -25,7 +25,11 @@ function App() {
   return (
     <div className="App">
       <PartsList parts={parts} />
-      <Paginator numPages={numPages} currentPage={currentPage} />
+      <Paginator
+        numPages={numPages}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
     </div>
   );
 }

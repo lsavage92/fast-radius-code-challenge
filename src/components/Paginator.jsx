@@ -1,7 +1,15 @@
 const Paginator = ({ numPages, currentPage, setCurrentPage }) => {
+  function previousPage() {
+    let newPage = currentPage - 1;
+    setCurrentPage(newPage < 0 ? 0 : newPage);
+  }
+  function nextPage() {
+    let newPage = currentPage + 1;
+    setCurrentPage(newPage > numPages - 1 ? numPages - 1 : newPage);
+  }
   return (
     <div id="paginator">
-      <button>Previous</button>
+      <button onClick={previousPage}>Previous</button>
       <div id="pages">
         {[...Array(numPages).keys()].map((page, i) => {
           // Usually using an index as a key is a bug due to
@@ -11,13 +19,14 @@ const Paginator = ({ numPages, currentPage, setCurrentPage }) => {
             <div
               className={`page-number ${currentPage === i ? "active" : ""}`}
               key={i}
+              onClick={(e) => setCurrentPage(i)}
             >
               {i + 1}
             </div>
           );
         })}
       </div>
-      <button>Next</button>
+      <button onClick={nextPage}>Next</button>
     </div>
   );
 };
