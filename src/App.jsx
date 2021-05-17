@@ -11,16 +11,16 @@ function App() {
    * application is simple I will just manage state here.
    */
   const [parts, setParts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   const [numPages, setNumPages] = useState(0);
 
-  // Initial render
+  // Fetch new page whenever currentPage updates
   useEffect(() => {
-    fetchParts().then((res) => {
+    fetchParts(currentPage).then((res) => {
       setNumPages(res.totalPages);
       setParts(res.result);
     });
-  }, []);
+  }, [currentPage]);
 
   return (
     <div className="App">

@@ -3,9 +3,9 @@
  * backend view.
  */
 
-export const fetchParts = async () => {
+export const fetchParts = async (page) => {
   try {
-    const res = await fetch("http://localhost:5555/parts");
+    const res = await fetch(`http://localhost:5555/parts?page=${page}`);
     const json = await res.json();
     return json;
   } catch (e) {
