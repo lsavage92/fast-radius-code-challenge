@@ -23,7 +23,10 @@ function App() {
   }, [currentPage]);
 
   return (
-    <div className="App">
+    <div id="app">
+      <header>
+        <h1 id="parts-title">Parts</h1>
+      </header>
       <PartsList parts={parts} />
       <Paginator
         numPages={numPages}

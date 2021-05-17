@@ -1,0 +1,29 @@
+#parts-list {
+  padding: $spacing;
+}
+
+.part-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 75px;
+  border: 1px solid $black;
+  padding: $spacing-small;
+  border-radius: $spacing-small;
+  &:not(:first-child) {
+    margin-top: $spacing-small;
+  }
+
+  input {
+    border: 1px solid $black;
+    border-radius: $spacing-small;
+    padding: $spacing-small;
+  }
+
+  button {
+    margin-left: $spacing;
+    padding: $spacing-small;
+    border: 1px solid $black;
+    border-radius: $spacing-small;
+  }
+}

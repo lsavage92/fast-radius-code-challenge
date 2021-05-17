@@ -1,3 +1,5 @@
+// Ideally I'd also maintain the current page as a query param for shareable links
+
 const Paginator = ({ numPages, currentPage, setCurrentPage }) => {
   function previousPage() {
     let newPage = currentPage - 1;
@@ -17,6 +19,7 @@ const Paginator = ({ numPages, currentPage, setCurrentPage }) => {
           // I believe it will suffice.
           return (
             <div
+              data-testid={`page-${page}`}
               className={`page-number ${
                 currentPage === page + 1 ? "active" : ""
               }`}
@@ -34,11 +37,3 @@ const Paginator = ({ numPages, currentPage, setCurrentPage }) => {
 };
 
 export default Paginator;
-
-/**
- * Flex box
- * prev - pages - end
- *
- * pages
- * flex for numPages
- */

@@ -6,7 +6,7 @@ const PartCard = ({ part }) => {
   let [quantity, setQuantity] = useState(part.quantity);
 
   return (
-    <div>
+    <div className="part-card">
       <span>{part.part_file.file_name}</span>
       <div className="card-actions">
         <input

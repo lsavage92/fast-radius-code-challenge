@@ -1,0 +1,30 @@
+// Colors
+$light-grey: #f1f1f1;
+$white: #ffffff;
+$black: #000000;
+
+// Font
+$font-size: 16px;
+$font-size-large: 32px;
+
+/**
+ * Spacing
+ * 
+ * Spacing variables are used to ensure the app margins/paddings stay in a consistent
+ * ratio as often as possible. Inevitably there will be places where we need more
+ * flexibility, but for most cases these should be used.
+ **/
+$spacing-small: 8px;
+$spacing: 16px;
+$spacing-large: 32px;
+
+/**
+ * Theming variables
+ * 
+ * If we were to want some sort of white-label solution or client branding,
+ * these names make it easy to know what styles we are overriding. Since SCSS
+ * variables are compiled to CSS at compile time, we cannot override these as they stand.
+ * However, we could use regular css variables since they are able to be overridden at
+ * runtime.
+ **/
+$background-color: $light-grey;
